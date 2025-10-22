@@ -15,7 +15,7 @@ import Carga from './pages/Carga/Carga';
 import AlocacaoOS from './pages/Alocacao/AlocacaoOS';
 import FichaEnvio from './pages/FichaEnvio/FichaEnvio';
 import Planner from './pages/planner_temp/planner';
-import Acompanhamento from './pages/acompanhamentoNovo/Acompanhamento';
+import Acompanhamento from './pages/acompanhamentoFinal/Acompanhamento';
 import VisualizadorPlanejamento from './pages/VisualizadorPlanejamento/VisualizadorPlanejamento';
 
 
