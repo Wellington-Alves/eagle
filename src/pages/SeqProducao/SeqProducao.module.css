@@ -1,0 +1,262 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.tabelaContainer {
+  margin-top: 20px;
+}
+
+.maquinaLista {
+  margin-bottom: 20px;
+}
+
+.listaOs {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.itemOS {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  border-left: 4px solid transparent;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+}
+
+.statusAguardando {
+  border-left-color: #ff0000;
+  color: #b00000;
+}
+
+.statusAguardandoMaterial {
+  border-left-color: #ff8c00;
+  color: #cc6600;
+}
+
+.statusAndamento {
+  border-left-color: #007bff;
+  color: #0056b3;
+}
+
+.statusConcluida {
+  border-left-color: #28a745;
+  color: #1e7e34;
+}
+
+.statusDefault {
+  border-left-color: #6c757d;
+  color: #495057;
+}
+
+.statusIcon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.osTexto {
+  flex: 1;
+}
+
+.empty {
+  font-style: italic;
+  color: #666;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.printButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.printButton:hover {
+  background-color: #0056b3;
+}
+
+.pageBreak {
+  page-break-before: always;
+  break-before: page;
+}
+
+/* Remove a quebra de página da primeira máquina */
+.pageBreak:first-child {
+  page-break-before: avoid;
+  break-before: avoid;
+}
+
+/* ===== ESTILOS DE IMPRESSÃO CORRIGIDOS ===== */
+@media print {
+  /* Ocultar controles */
+  .controls {
+    display: none !important;
+  }
+
+  /* Container principal */
+  .container {
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 15px !important;
+    font-family: Arial, sans-serif !important;
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Container da tabela */
+  .tabelaContainer {
+    display: block !important;
+    margin-top: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Seções de impressão */
+  .print-section,
+  .pageBreak {
+    display: block !important;
+    width: 100% !important;
+    background: white !important;
+    color: black !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Títulos */
+  .print-title,
+  .print-subtitle,
+  h2, h3 {
+    color: black !important;
+    margin: 10px 0 !important;
+    font-weight: bold !important;
+    display: block !important;
+    page-break-after: avoid !important;
+  }
+
+  /* Lista de OS */
+  .print-list,
+  .listaOs {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 10px 0 !important;
+    display: block !important;
+  }
+
+  /* Itens da OS */
+  .print-item,
+  .itemOS {
+    display: block !important;
+    width: 100% !important;
+    border: 1px solid #000 !important;
+    background: white !important;
+    color: black !important;
+    margin-bottom: 8px !important;
+    padding: 8px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Conteúdo do texto */
+  .print-text,
+  .osTexto {
+    color: black !important;
+    display: block !important;
+    width: 100% !important;
+    word-wrap: break-word !important;
+  }
+
+  .print-text strong,
+  .osTexto strong {
+    color: black !important;
+    font-weight: bold !important;
+  }
+
+  /* Ícones de status */
+  .print-icon,
+  .statusIcon {
+    color: black !important;
+    display: inline-block !important;
+    margin-right: 8px !important;
+    font-size: 14px !important;
+  }
+
+  /* Mensagem vazia */
+  .print-empty,
+  .empty {
+    color: black !important;
+    font-style: italic !important;
+    display: block !important;
+  }
+
+  /* Quebras de página */
+  .pageBreak {
+    page-break-before: always !important;
+    break-before: page !important;
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+  }
+  
+  .pageBreak:first-child {
+    page-break-before: avoid !important;
+    break-before: avoid !important;
+    padding-top: 0 !important;
+  }
+
+  /* Forçar visibilidade de cores */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Garantir que o conteúdo seja visível */
+  body * {
+    visibility: hidden !important;
+  }
+
+  #print-content,
+  #print-content * {
+    visibility: visible !important;
+  }
+
+  /* Remover sombras e efeitos visuais */
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}

@@ -1,0 +1,184 @@
+/* Estilos baseados no CartaoPercurso.css */
+.app-wrapper {
+  padding: 1rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.main-title {
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.content-container {
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.loading,
+.no-results {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.results-panel {
+  padding: 1rem;
+}
+
+.print-panel {
+  margin-bottom: 1rem;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.os-group {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f9fafb;
+}
+
+.os-title {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.resultado-grade {
+  margin-bottom: 1rem;
+}
+
+.processos-grid {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr); /* Uma para posição + 12 operações */
+  gap: 0.5rem;
+}
+
+.posicao-celula {
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 1;
+}
+
+.posicao-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.posicao-numero {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.posicao-quantidade {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.operacao-data {
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.operacao {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.data-limite {
+  font-size: 0.75rem;
+  color: #ef4444;
+}
+
+.etapa {
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+.print-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+  margin-left: auto;
+  display: block;
+}
+
+.print-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Estilos para impressão */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    zoom: 0.75; /* Reduz a escala para 75% */
+  }
+  
+  .app-wrapper {
+    transform: none !important; /* Remove transform para impressão */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .no-print {
+    display: none !important; /* Oculta elementos com a classe no-print */
+  }
+  
+  .results-container {
+    page-break-inside: avoid; /* Evita quebra de página dentro do contêiner */
+  }
+  
+  .os-group {
+    page-break-inside: avoid;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+    border-radius: 0;
+    padding: 0.25rem 0;
+    margin-bottom: 0.25rem; /* Reduz o espaço entre os grupos */
+  }
+  
+  .resultado-grade {
+    margin-bottom: 0.5rem;
+  }
+
+  .operacao-data {
+    padding: 0.3rem; /* Reduz o preenchimento dos quadrados */
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+  }
+
+  h1, h2 {
+    margin: 0.5rem 0; /* Reduz margens dos títulos */
+  }
+}

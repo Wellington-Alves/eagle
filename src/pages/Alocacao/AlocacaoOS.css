@@ -1,0 +1,79 @@
+.container {
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .search-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .table-container {
+    margin-top: 20px;
+  }
+  
+  .positions-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .positions-table th,
+  .positions-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .positions-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .no-results {
+    text-align: center;
+    color: #888;
+    margin-top: 20px;
+  }
+  
+  .loading-indicator {
+    text-align: center;
+    color: #007bff;
+    font-weight: bold;
+  }
+  .icon-button.save {
+    color: #28a745; /* Verde */
+  }

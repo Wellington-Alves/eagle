@@ -1,0 +1,37 @@
+.campo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.select {
+  width: 100%;
+  font-size: 14px !important; /* Mudando para pixels para maior consistência */
+  padding: 2px 4px;
+  height: 28px; /* Aumentando um pouco a altura para acomodar a fonte maior */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.select option {
+  font-size: 20px !important;
+}
+
+.input {
+  width: 100%;
+  font-size: 20px !important;
+  padding: 2px 4px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+/* Removendo os estilos globais que não estavam funcionando */
+.maquinaSelectCustom {
+  font-size: 20px !important;
+  height: 28px;
+}

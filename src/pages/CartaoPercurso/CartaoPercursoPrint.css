@@ -1,0 +1,88 @@
+/* RESET GERAL PARA IMPRESSÃO */
+.print-wrapper, .print-wrapper * {
+    box-sizing: border-box !important;
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* IMPRESSÃO EM PAISAGEM */
+@media print {
+    @page { size: landscape; margin: 10mm; }
+    .no-print { display: none !important; }
+}
+
+/* CONTAINER PRINCIPAL */
+.print-wrapper {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background: white;
+    padding: 5mm;
+}
+
+/* CABEÇALHO */
+.print-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5mm;
+}
+.print-wrapper td {
+    border: 1pt solid black;
+    padding: 3mm;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* LOGOS */
+.print-wrapper img {
+    max-height: 50pt;
+}
+
+/* GRID DE POSIÇÕES E OPERAÇÕES */
+.resultado-grade {
+    display: grid;
+    grid-template-columns: 60pt repeat(10, 1fr);
+    gap: 2mm;
+    margin-bottom: 5mm;
+    page-break-inside: avoid;
+}
+
+/* CÉLULA DE POSIÇÃO */
+.posicao-celula {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    border: 1pt solid black;
+    min-height: 20mm;
+    font-weight: bold;
+}
+
+/* CÉLULAS DE OPERAÇÃO */
+.operacao-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2mm;
+    border: 1pt solid black;
+    min-height: 20mm;
+    font-size: 9pt;
+}
+
+/* CORES POR ETAPA */
+.operacao-data[data-etapa="Em Proc."],
+.operacao-data[data-etapa="Em And."] { background: #e3f2fd; }
+.operacao-data[data-etapa="Concl."] { background: #d4edda; }
+.operacao-data[data-etapa="Mat. Prima"] { background: #fff3cd; }
+.operacao-data[data-etapa="Canc."] { background: #f8d7da; }
+.operacao-data.atrasado { background: #ffebee !important; }
+
+/* TEXTOS INTERNOS */
+.posicao-label { font-size: 9pt; }
+.posicao-numero { font-size: 12pt; font-weight: bold; }
+.posicao-quantidade { font-size: 9pt; }

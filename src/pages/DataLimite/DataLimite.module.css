@@ -1,0 +1,35 @@
+/* Estilos específicos de relatórios */
+.report-container {
+    @extend .fullscreen-container;
+    background-color: #f8f9fa;
+  }
+  
+  .report-title {
+    @extend .title--large;
+  }
+  
+  .report-grid {
+    @extend .grid-container;
+  }
+  
+  .report-card {
+    @extend .card;
+  }
+  
+  .report-card:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .report-card .icon {
+    color: #3498db;
+    @extend .icon--large;
+  }
+  
+  .report-card button {
+    @extend .btn--primary;
+    margin-top: auto;
+  }
+  
+  .report-card button:disabled {
+    @extend .btn--disabled;
+  }

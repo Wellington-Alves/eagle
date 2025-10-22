@@ -1,0 +1,117 @@
+/* Container do Quadro2 */
+.quadro2 {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.8rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #1a73e8;
+}
+
+/* Título do Quadro2 */
+.titulo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1a73e8;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Container dos campos */
+.campos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Linha de campos */
+.linha {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Estilo para cada campo */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: flex-start;
+  min-width: 100px;
+}
+
+/* Estilo para os rótulos dos campos */
+.campoLabel {
+  font-size: 0.75rem;
+  color: #555;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* Estilo para os campos de entrada */
+.campoInput {
+  width: 100%;
+  padding: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  text-align: center;
+  height: 26px;
+}
+
+/* Campo pequeno (para Qtd. Material, Tipo e Formato) */
+.campoPequeno {
+  width: 75px; /* Reduzido */
+}
+
+/* Campo flexível (para Material) */
+.campoFlexivel {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.3rem;
+  min-width: 150px; /* Ajuste de largura mínima */
+}
+
+/* Grupo de campos (Tipo, Formato, Material) */
+.grupoMaterial {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Container da label "Material" */
+.campoMaterialLabel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* Estilo para o checkbox */
+.campoCheckbox {
+  margin-left: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+/* Ajustes específicos para os campos de Quantidade de Material, Largura e Comprimento */
+.campoInput.quantidadeMaterial,
+.campoInput.largura,
+.campoInput.comprimento {
+  width: 70px; /* Ajustando largura */
+  font-size: 0.75rem; /* Fonte menor */
+  height: 22px; /* Menor altura */
+}
+
+/* Ajustes específicos para os campos de Quantidade de Material, Largura e Comprimento */
+.campoInput.quantidadeMaterial {
+  width: 20px; /* Largura reduzida */
+  font-size: 0.75rem;
+  height: 22px;
+}

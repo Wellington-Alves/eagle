@@ -1,0 +1,151 @@
+/* filepath: c:\Users\Wellington\Desktop\wellington\src\pages\CadastroOS\ModalEdicao.module.css */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho total do elemento */
+}
+
+.form-group textarea {
+  resize: vertical; /* Permite redimensionamento vertical */
+  height: 100px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.form-actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+}
+
+.form-actions button:hover {
+  background-color: #4cae4c;
+}
+```
+
+Verifique se o arquivo `ModalEdicao.module.css` realmente existe na pasta `src/pages/CadastroOS/` e se o nome do arquivo está correto. Se o arquivo existir e o nome estiver correto, pode haver um problema com a configuração do seu ambiente de desenvolvimento. Nesse caso, você pode tentar reiniciar o servidor de desenvolvimento ou limpar o cache do Vite./* filepath: c:\Users\Wellington\Desktop\wellington\src\pages\CadastroOS\ModalEdicao.module.css */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho total do elemento */
+}
+
+.form-group textarea {
+  resize: vertical; /* Permite redimensionamento vertical */
+  height: 100px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.form-actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+}
+
+.form-actions button:hover {
+  background-color: #4cae4c;
+}
+```
+
+Verifique se o arquivo `ModalEdicao.module.css` realmente existe na pasta `src/pages/CadastroOS/` e se o nome do arquivo está correto. Se o arquivo existir e o nome estiver correto, pode haver um problema com a configuração do seu ambiente de desenvolvimento. Nesse caso, você pode tentar reiniciar o servidor de desenvolvimento ou limpar o cache do Vite.

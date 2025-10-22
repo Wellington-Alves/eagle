@@ -1,0 +1,459 @@
+/* Estilos gerais */
+.planner-container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titulo-planner {
+  color: #1a73e8;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+/* Filtros */
+.filtros-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  align-items: flex-end;
+}
+
+.filtro-operacao,
+.filtro-data {
+  flex: 1;
+  min-width: 250px;
+}
+
+.filtro-operacao label,
+.filtro-data label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.filtro-operacao select,
+.filtro-data input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+/* Botões de visualização */
+.botoes-visualizacao {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.botao-visualizacao {
+  padding: 0.75rem 1.5rem;
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.botao-visualizacao.ativo {
+  background-color: #1a73e8;
+  color: white;
+}
+
+/* Conteúdo principal */
+.conteudo-planner {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-height: 300px;
+}
+
+.titulo-visualizacao {
+  margin-bottom: 1.5rem;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contador-tarefas {
+  font-size: 14px;
+  font-weight: normal;
+  color: #666;
+}
+
+.mensagem-sem-dados,
+.mensagem-carregamento {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.1rem;
+}
+
+/* Visualização diária */
+.container-linha-temporal {
+  margin-top: 1rem;
+}
+
+.linha-maquina {
+  margin-bottom: 2rem;
+}
+
+.titulo-maquina {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+.linha-temporal {
+  position: relative;
+  height: 80px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.marcadores-hora {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  z-index: 1;
+}
+
+.marcador-hora {
+  flex: 1;
+  border-right: 1px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #666;
+  height: 100%;
+}
+
+.marcador-hora:last-child {
+  border-right: none;
+}
+
+.bloco-almoco {
+  position: absolute;
+  top: 30px;
+  left: calc((4 / 9) * 100%);
+  width: calc((1 / 9) * 100%);
+  height: 50px;
+  background-color: #e0e0e0;
+  opacity: 0.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rotulo-almoco {
+  background-color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 10px;
+  color: #666;
+}
+
+.bloco-tarefa {
+  position: absolute;
+  top: 40px;
+  height: 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  z-index: 2;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Visualização semanal */
+.container-semanal {
+  margin-top: 1rem;
+  min-width: 1400px;
+  overflow-x: auto;
+}
+
+.periodo-semanal {
+  margin-bottom: 1rem;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.cabecalho-dias {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  margin-bottom: 1rem;
+  background-color: #f0f0f0;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.dia-cabecalho {
+  width: 120px;
+  min-width: 120px;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #white;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.data-dia {
+  font-size: 10px;
+  color: #666;
+}
+
+.linha-semanal {
+  margin-bottom: 2rem;
+}
+
+.linha-semanal-dia {
+  border-bottom: 1px solid #eee;
+  min-height: 40px;
+}
+
+.grid-semanal {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.celula-dia {
+  position: relative;
+  flex: 1;
+  min-height: 40px;
+  background-color: white;
+  border-right: 1px solid #ddd;
+}
+
+.marcadores-hora-semanal {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  z-index: 1;
+}
+
+.marcador-hora-semanal {
+  flex: 1;
+  border-right: 1px dashed #eee;
+  font-size: 8px;
+  color: #999;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.bloco-tarefa-semanal {
+  position: absolute;
+  top: 30px;
+  height: 40px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  z-index: 2;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+/* Visualização mensal */
+.container-mensal {
+  margin-top: 1rem;
+}
+
+.titulo-mes {
+  color: #1a73e8;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.grid-mensal {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dia-semana-cabecalho {
+  padding: 0.5rem;
+  background-color: #e0e0e0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.celula-dia-mensal {
+  min-height: 80px;
+  padding: 0.5rem;
+  background-color: white;
+  border-right: 1px solid #ddd;
+  position: relative;
+}
+
+.marcadores-hora-mensal {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  z-index: 1;
+}
+
+.marcador-hora-mensal {
+  flex: 1;
+  border-right: 1px dashed #eee;
+  font-size: 8px;
+  color: #999;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.bloco-tarefa-mensal {
+  position: absolute;
+  top: 30px;
+  height: 40px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  z-index: 2;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .filtros-container {
+    flex-direction: column;
+  }
+
+  .filtro-operacao,
+  .filtro-data {
+    min-width: 100%;
+  }
+
+  .botoes-visualizacao {
+    flex-direction: column;
+  }
+
+  .botao-visualizacao {
+    width: 100%;
+  }
+
+  .titulo-planner {
+    font-size: 1.5rem;
+  }
+
+  .conteudo-planner {
+    padding: 1.5rem;
+  }
+
+  .linha-temporal {
+    height: 60px;
+  }
+
+  .marcadores-hora {
+    height: 25px;
+  }
+
+  .marcador-hora {
+    font-size: 10px;
+  }
+
+  .bloco-almoco {
+    height: 40px;
+  }
+
+  .bloco-tarefa {
+    height: 25px;
+    font-size: 10px;
+  }
+
+  .container-semanal {
+    flex-direction: column;
+    min-width: 100%;
+  }
+
+  .dia-cabecalho {
+    padding: 0.3rem;
+    font-size: 10px;
+  }
+
+  .celula-dia {
+    height: 60px;
+  }
+
+  .marcadores-hora-semanal {
+    height: 20px;
+  }
+
+  .marcador-hora-semanal {
+    font-size: 7px;
+  }
+
+  .bloco-tarefa-semanal {
+    height: 35px;
+    font-size: 9px;
+  }
+
+  .titulo-mes {
+    font-size: 1.2rem;
+  }
+
+  .celula-dia-mensal {
+    min-height: 60px;
+  }
+
+  .marcadores-hora-mensal {
+    height: 20px;
+  }
+
+  .marcador-hora-mensal {
+    font-size: 7px;
+  }
+
+  .bloco-tarefa-mensal {
+    height: 35px;
+    font-size: 9px;
+  }
+}

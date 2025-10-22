@@ -1,0 +1,161 @@
+/* Container do Quadro3 */
+.quadro {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título do Quadro3 */
+.tituloQuadro {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #1a73e8;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+/* Espaço abaixo do título */
+.espacoTitulo {
+  margin-bottom: 0.5rem;
+}
+
+/* Linha do cabeçalho */
+.headerRow {
+  display: flex;
+  background-color: #f8f9fa;
+  padding: 0.2rem;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  font-size: 0.85rem;
+}
+
+/* Célula do cabeçalho */
+.headerCell {
+  flex: 1;
+  text-align: center;
+  padding: 0.2rem;
+  font-size: 0.7rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+/* Linha de dados */
+.dataRow {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 0.7rem;
+}
+
+/* Célula de dados */
+.dataCell {
+  flex: 1;
+  text-align: left;
+  padding: 0.2rem;
+  width: 100%;
+}
+
+/* Estilo para campos de entrada */
+.campoInput {
+  width: 100%;
+  padding: 2px 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.5rem;
+  text-align: center;
+  height: 24px;
+}
+
+.campoInput:focus {
+  border-color: #1a73e8;
+  outline: none;
+}
+
+/* Estilos básicos para o container do select */
+.campoSelect {
+  width: 100%;
+  font-size: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Removida duplicação de bordas e estilização apenas para o select */
+.campoSelect select {
+  width: 100%;
+  padding: 2px 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.5rem;
+  text-align: center;
+  height: 24px;  /* Mesma altura do campoInput */
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo específico para o select de máquina - aplicado apenas ao container */
+.maquinaSelect {
+  font-size: 0.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos aplicados ao select dentro do container de máquina */
+.maquinaSelect select {
+  font-size: 0.45rem;
+  padding: 1px 2px;
+  height: 24px;  /* Ajustado para corresponder ao campoInput */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo específico para o select de status - aplicado apenas ao container */
+.statusSelect {
+  font-size: 0.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos aplicados ao select dentro do container de status */
+.statusSelect select {
+  font-size: 0.45rem;
+  padding: 1px 2px;
+  height: 24px;  /* Ajustado para corresponder ao campoInput */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sobrescrevendo o estilo do elemento option dentro dos selects */
+.campoSelect select option {
+  font-size: 0.5rem;
+}
+
+.maquinaSelect select option,
+.statusSelect select option {
+  font-size: 0.45rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .headerRow,
+  .dataRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headerCell,
+  .dataCell {
+    width: 100%;
+    text-align: left;
+    padding: 0.2rem 0;
+  }
+}

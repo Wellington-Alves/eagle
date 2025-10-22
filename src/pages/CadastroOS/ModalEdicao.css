@@ -1,0 +1,31 @@
+.date-field {
+  position: relative;
+  width: 100%;
+}
+
+.date-field input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.date-field input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 8px;
+  cursor: pointer;
+}
+
+.date-field input[type="date"]::-webkit-datetime-edit {
+  display: none;
+}
+
+.date-field input[type="date"]::before {
+  content: attr(data-date);
+  width: calc(100% - 25px);
+  display: inline-block;
+}
+
+.date-field input[type="date"]:valid::before {
+  display: none;
+}

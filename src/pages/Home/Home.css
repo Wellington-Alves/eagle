@@ -1,0 +1,52 @@
+/* Container geral para centralizar tudo */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Centraliza o conteúdo verticalmente */
+  align-items: center;  /* Centraliza horizontalmente */
+  height: 100vh;  /* Garante que o container ocupe toda a altura da tela */
+  padding: 2rem;
+  text-align: center;  /* Centraliza o texto do título */
+  background-color: #fff
+}
+
+/* Estilo do título */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a73e8;
+  margin-bottom: 2rem;  /* Ajusta o espaçamento do título para os cards */
+}
+
+/* Contêiner de links com grid */
+.links-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Grid responsivo */
+  gap: 1.5rem;  /* Espaçamento entre os cards */
+  width: 100%;  /* Ocupa a largura inteira */
+  max-width: 1200px;  /* Máxima largura de 1200px para manter o layout controlado */
+}
+
+/* Estilo dos cards */
+.link-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  color: white;
+}
+
+.link-card:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.icon {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}

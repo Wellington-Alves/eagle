@@ -1,0 +1,165 @@
+/* CartaoPercurso.css */
+
+/* --- Reset básico --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+}
+
+/* --- Estilo para tela --- */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #213547;
+}
+
+.app-wrapper {
+  padding: 20px;
+}
+
+.no-print {
+  margin-bottom: 20px;
+}
+
+.search-panel input,
+.search-panel button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.print-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #1a237e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* --- Print Content --- */
+.print-content {
+  background: #fff;
+  width: 100%;
+}
+
+.header-container,
+.header-container td {
+  border: 1px solid black;
+  padding: 5mm;
+  text-align: center;
+}
+
+.header-container img {
+  max-height: 15mm;
+}
+
+.resultado-grade {
+  margin-bottom: 5mm;
+  page-break-inside: avoid;
+}
+
+.processos-grid {
+  display: grid;
+  grid-template-columns: 60pt repeat(10, 1fr);
+  gap: 2mm; /* Espaçamento entre células */
+  background: #fff;
+}
+
+.posicao-celula {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 15mm;
+  border: 1px solid black;
+  border-radius: 4px; /* Bordas arredondadas */
+  background: #f0f0f0;
+  font-weight: bold;
+  padding: 2mm;
+}
+
+.posicao-label {
+  font-size: 9pt;
+}
+
+.posicao-numero {
+  font-size: 10pt;
+}
+
+.operacao-data {
+  display: flex;
+  flex-direction: column;
+  min-height: 15mm;
+  padding: 2mm;
+  border: 1px solid black;
+  border-radius: 4px; /* Bordas arredondadas */
+  background: white;
+}
+
+.operacao-data .operacao {
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+.operacao-data .data-limite,
+.operacao-data .etapa {
+  font-size: 9pt;
+  padding: 1mm 2mm;
+}
+
+/* --- Impressão --- */
+@media print {
+  @page {
+    size: portrait;
+    margin: 15mm;
+  }
+
+  body, .print-content {
+    background: #fff !important;
+    color: #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .header-container {
+    border: 1px solid black !important;
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin-bottom: 5mm;
+  }
+
+  .header-container td {
+    border: 1px solid black !important;
+    padding: 3mm !important;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .header-container img {
+    max-height: 15mm !important;
+    height: auto !important;
+    width: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .processos-grid {
+    gap: 2mm !important;
+  }
+
+  .posicao-celula,
+  .operacao-data {
+    border-radius: 4px !important;
+    border: 1px solid black !important;
+    padding: 2mm !important;
+    box-sizing: border-box !important;
+    break-inside: avoid !important;
+    background-clip: padding-box !important;
+  }
+}
+
